@@ -4,7 +4,10 @@
   "description": "herlper functions",
   "main": "helpers.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage --verbose"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
