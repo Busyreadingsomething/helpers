@@ -1,0 +1,25 @@
+{
+  "name": "helpers",
+  "version": "1.0.0",
+  "description": "herlper functions",
+  "main": "helpers.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Busyreadingsomething/helpers.git"
+  },
+  "keywords": [
+    "helpers"
+  ],
+  "author": "Makan Azarshahy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Busyreadingsomething/helpers/issues"
+  },
+  "homepage": "https://github.com/Busyreadingsomething/helpers#readme",
+  "devDependencies": {
+    "jest": "^23.4.2"
+  }
+}
