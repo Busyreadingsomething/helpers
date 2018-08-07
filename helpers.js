@@ -9,7 +9,7 @@ export default {
         if (callback) callback(obj[key], key, obj);
       }
     } else {
-      throw new Error('Please submit an Array or Object');
+      throw new Error('Object or Array was not given');
     }
   },
   map(obj, callback) {

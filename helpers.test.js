@@ -25,12 +25,12 @@ describe('### X ###', () => {
     });
 
     it('should throw an error if no ARRAY or OBJECT is passed', () => {
-      expect(() => X.all('BAD')).toThrow('Please submit an Array or Object');
-      expect(() => X.all(123)).toThrow('Please submit an Array or Object');
-      expect(() => X.all(null)).toThrow('Please submit an Array or Object');
-      expect(() => X.all(true)).toThrow('Please submit an Array or Object');
-      expect(() => X.all(false)).toThrow('Please submit an Array or Object');
-      expect(() => X.all()).toThrow('Please submit an Array or Object');
+      expect(() => X.all('BAD')).toThrow('Object or Array was not given');
+      expect(() => X.all(123)).toThrow('Object or Array was not given');
+      expect(() => X.all(null)).toThrow('Object or Array was not given');
+      expect(() => X.all(true)).toThrow('Object or Array was not given');
+      expect(() => X.all(false)).toThrow('Object or Array was not given');
+      expect(() => X.all()).toThrow('Object or Array was not given');
     });
 
     it('should iterate through the entire list\'s elements', () => {
@@ -62,5 +62,31 @@ describe('### X ###', () => {
       X.all(MAP, (item, key) => final.push(key));
       expect(final).toEqual(expect.arrayContaining(expectedKeys));
     })
+  });
+
+  describe('___ MAP ___', () => {
+    let LIST;
+    let MAP;
+    beforeAll(() => {
+      LIST = [1, 2, 3, 4, 5];
+      MAP = {
+        a: 1,
+        b: 2,
+        c: 3,
+      };
+    });
+
+    it('should be a function', () => {
+      expect(X.map).toBeInstanceOf(Function);
+    });
+
+    it('should throw an error if no ARRAY or OBJECT is passed', () => {
+      expect(() => X.map('BAD')).toThrow('Object or Array was not given');
+      expect(() => X.map(123)).toThrow('Object or Array was not given');
+      expect(() => X.map(null)).toThrow('Object or Array was not given');
+      expect(() => X.map(true)).toThrow('Object or Array was not given');
+      expect(() => X.map(false)).toThrow('Object or Array was not given');
+      expect(() => X.map()).toThrow('Object or Array was not given');
+    });
   });
 });
