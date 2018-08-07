@@ -52,14 +52,15 @@ describe('### X ###', () => {
         b: 2,
         c: 3,
       };
-      X.all(MAP, key => final[key] = MAP[key]);
+      X.all(MAP, (item, key) => final[key] = item);
       expect(final).toEqual(expect.objectContaining(expectedObj));
     });
+
+    it('should have access to the object\'s keys', () => {
+      const final = [];
+      const expectedKeys = ['a', 'b', 'c'];
+      X.all(MAP, (item, key) => final.push(key));
+      expect(final).toEqual(expect.arrayContaining(expectedKeys));
+    })
   });
-
-  // describe('___ MAP ___', () => {
-  //   beforeAll(() => {
-
-  //   })
-  // });
 });
